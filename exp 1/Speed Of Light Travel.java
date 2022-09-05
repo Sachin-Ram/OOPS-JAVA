@@ -1,6 +1,6 @@
 
 package exp1;
-import java.util.scanner;
+import java.util.Scanner;
 
 public class speed {
 
