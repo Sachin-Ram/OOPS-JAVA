@@ -1,18 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package pkg100.to.pkg200;
 
-/**
- *
- * @author 21cse104
- */
-public class To200 {
+package exp1;
 
-    /**
-     * @param args the command line arguments
-     */
+public class divisibleby8 {
+
+  
     public static void main(String[] args)  
  {
 
@@ -30,6 +21,5 @@ public class To200 {
  System.out.println("Total numbers between 100 to 200 which are divisible by 8 is: "+count);
  }
  } 
-        // TODO code application logic here
     }
 
