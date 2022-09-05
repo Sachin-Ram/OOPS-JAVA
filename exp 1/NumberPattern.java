@@ -1,8 +1,8 @@
-package TeamTaz;
+package exp1;
 
 import java.util.Scanner;
 
-public class Number
+public class pattern
 {
     public static void main(String[] args)
     {     
