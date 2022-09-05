@@ -1,6 +1,7 @@
+package exp1;
 import java.util.Scanner;
 
-public class taz {
+public class discount{
 
     static void print(String line) {
         System.out.println(line);
