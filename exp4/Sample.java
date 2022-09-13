@@ -55,10 +55,10 @@ public class Sample
 {
     public static void main(String[] args)
     {
-        manager m1=new manager("jegan",12,18);
+        manager m1=new manager("kingsley",12,18);
         System.out.println("total salary:"+m1.CalcSalary(20));
         System.out.println(m1.tostring());
-        manager m2=new manager("jegan",12,18);
+        manager m2=new manager("gowtham",12,19);
         System.out.println("total salary:"+m2.CalcSalary(20));
         System.out.println(m2.tostring());
         clerk cle=new clerk("muthu",10,19);
