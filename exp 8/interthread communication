@@ -38,7 +38,8 @@ class Q
     }
 }
 class Producer implements Runnable
-{ Q q;
+{
+ Q q;
     Producer(Q q)
     {
         this.q = q;
