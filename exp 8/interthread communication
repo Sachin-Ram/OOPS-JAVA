@@ -7,6 +7,7 @@ class Q
     synchronized int get()
     {
         while(!valueSet)
+        {
             try
             {
                 wait();
@@ -15,7 +16,8 @@ class Q
             {
                 System.out.println("InterruptedException caught");
             }
-        System.out.println("CONSUMES: " + n);
+        }
+        System.out.println("Get: " + n);
         valueSet = false;
         notify();
         return n;
@@ -23,6 +25,7 @@ class Q
     synchronized void put(int n)
     {
         while(valueSet)
+        {
             try
             {
                 wait();
@@ -31,15 +34,15 @@ class Q
             {
                 System.out.println("InterruptedExceptioncaught");
             }
+        }
         this.n = n;
         valueSet = true;
-        System.out.println("PRODUCES: " + n);
+        System.out.println("Put: " + n);
         notify();
     }
 }
 class Producer implements Runnable
-{
- Q q;
+{ Q q;
     Producer(Q q)
     {
         this.q = q;
@@ -48,10 +51,14 @@ class Producer implements Runnable
     public void run()
     {
         int i = 0;
-        while(i<10)
+        while(true)
         {
+            if(i==10){
+            System.exit(0);
+            }
             q.put(i++);
         }
+        
     }
 }
 class Consumer implements Runnable
@@ -62,6 +69,7 @@ class Consumer implements Runnable
         this.q = q;
         new Thread(this, "Consumer").start();
     }
+    @Override
     public void run()
     {
         while(true)
@@ -79,5 +87,4 @@ public class q2
         System.out.println("Press Control-C to stop.");
     }
 }
-
 
